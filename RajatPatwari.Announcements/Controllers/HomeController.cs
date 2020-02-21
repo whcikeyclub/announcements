@@ -1,0 +1,16 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+
+namespace RajatPatwari.Announcements.Controllers
+{
+    public sealed class HomeController : Controller
+    {
+        private readonly ILogger<HomeController> _logger;
+
+        public HomeController(ILogger<HomeController> logger) =>
+            _logger = logger;
+
+        public IActionResult Index() =>
+            View();
+    }
+}
